@@ -26,3 +26,144 @@
 
 // NProgress Styles.
 @import "04-libraries/nprogress";
+
+.nieuwe__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.header-begin {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    background: red;
+    background-image: url(/gezond-eten-kiezen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-overlay {
+    z-index: 9999999999;
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+}
+
+.a {
+    width: 40%;
+    height: 100%;
+    color: white;
+    z-index: 999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.b {
+    width: 60%;
+    height: 100%;
+}
+
+.begin-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    grid-gap: 1rem;
+    gap: 1rem;
+    z-index: 10000000000000000000000;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 80%;
+}
+
+.card__begin {
+    width: 40rem;
+    height: 20rem;
+    top: 80%;
+    background: white;
+    padding: 2rem;
+    z-index: 99999999999999;
+}
+
+.card__img {
+    background-image: url(/food-pizza-baking.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card__img-b {
+    background-image: url(/Food-Pictures.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container__categories {
+    height: 27rem;
+}
+
+.container__categories-a {
+    height: 60%;
+    width: 100%;
+}
+
+.container__categories-b {
+    background: orange;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.center__products {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.besteller__container {
+    width: 100%;
+    height: 35rem;
+    background: white;
+}
+
+.bestseller {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.bestseller__img {
+    background: url(/asdasd.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bestseller__img-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999999999;
+}

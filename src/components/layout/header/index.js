@@ -13,22 +13,15 @@ const Header = ({ header }) => {
 
 	const [isMenuVisible, setMenuVisibility] = useState(false);
 
+
 	return (
 		<>
 			<div className="header">
-				<nav className="bg-white py-5">
-					<div className="flex items-center justify-between flex-wrap container mx-auto">
-						<div className="flex items-center flex-shrink-0 text-black mr-20">
+				<nav className="bg-white py-5 shadow">
+					<div className="header-nav">
+						<div className="flex items-center flex-shrink-0 text-black mr-20 gap-4">
 							<Link href="/">
-								<a>
-									{
-										siteLogoUrl ? (
-											<img className="mr-2" src={siteLogoUrl} alt={`${siteTitle} logo`}
-												width="86"
-												height="86" />
-										) : <div /> // website logo
-									}
-								</a>
+								<img className="" width="40" src="/minty.jpg" alt="logo" />
 							</Link>
 							<span>
 								<Link href="/">
@@ -54,10 +47,24 @@ const Header = ({ header }) => {
 											dangerouslySetInnerHTML={{ __html: menuItem.title }} />
 									</Link>
 								)) : null} */}
+								<Link href="/">
+									<a className="block mt-4 lg:inline-block lg:mt-0 hover:text-brand-royal-blue duration-500 mr-10">Categories</a>
+								</Link>
+								<Link href="/">
+									<a className="block mt-4 lg:inline-block lg:mt-0 hover:text-brand-royal-blue duration-500 mr-10">Groente</a>
+								</Link>
+								<Link href="/">
+									<a className="block mt-4 lg:inline-block lg:mt-0 hover:text-brand-royal-blue duration-500 mr-10">Fruit</a>
+								</Link>
+								<Link href="/">
+									<a className="block mt-4 lg:inline-block lg:mt-0 hover:text-brand-royal-blue duration-500 mr-10">Offers</a>
+								</Link>
 								<Link href="/blog">
 									<a className="block mt-4 lg:inline-block lg:mt-0 hover:text-brand-royal-blue duration-500 mr-10">Blog</a>
 								</Link>
 							</div>
+						</div>
+						<div>
 							<div className="text-sm font-medium">
 								<a href="/"
 									className="flex mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">

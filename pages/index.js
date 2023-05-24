@@ -10,6 +10,10 @@ import { HEADER_FOOTER_ENDPOINT } from '../src/utils/constants/endpoints';
 import axios from 'axios';
 import { getProductsData } from '../src/utils/products';
 import Layout from '../src/components/layout';
+import Begin from "../src/components/begin";
+import Cards from "../src/components/cards";
+import Categories from "../src/components/categories";
+import Bestseller from '../src/components/bestseller';
 
 export default function Home({ headerFooter, products }) {
 	const seo = {
@@ -23,23 +27,31 @@ export default function Home({ headerFooter, products }) {
 		},
 	}
 	return (
-		<Layout headerFooter={ headerFooter || {} } seo={ seo }>
-			<Products products={products}/>
-		</Layout>
+		<>
+
+			<Layout headerFooter={headerFooter || {}} seo={seo}>
+				<Begin></Begin>
+				<Cards></Cards>
+				<Categories></Categories>
+				<Bestseller></Bestseller>
+				<Products products={products} />
+
+			</Layout>
+		</>
 	)
 }
 
 export async function getStaticProps() {
-	
-	const { data: headerFooterData } = await axios.get( HEADER_FOOTER_ENDPOINT );
+
+	const { data: headerFooterData } = await axios.get(HEADER_FOOTER_ENDPOINT);
 	const { data: products } = await getProductsData();
-	
+
 	return {
 		props: {
 			headerFooter: headerFooterData?.data ?? {},
 			products: products ?? {}
 		},
-		
+
 		/**
 		 * Revalidate means that if a new request comes to server, then every 1 sec it will check
 		 * if the data is changed, if it is changed then it will update the
